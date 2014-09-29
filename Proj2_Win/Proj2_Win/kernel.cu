@@ -7,6 +7,7 @@
 
 
 void scanNaive(const int *in, int *out, int len);
+void scanSharedMem_singleblock(const int *in, int *out, int len);
 void printArray(const int *out, const int len)
 {
 	for (size_t i = 0; i < len; i++)
@@ -33,14 +34,21 @@ __global__ void scanKernel_shared_singleblock(const int *in, int *out, int len)
 	extern __shared__ int temp[];
 	int thid = threadIdx.x;
 	int pin = 0, pout = 1;
-
+	temp[pout*len + thid] = (thid > 0) ? in[thid - 1]: 0;
 	__syncthreads();
 	for (size_t offset = 1; offset < len; offset *= 2)
 	{
+		pout = 1 - pout;
+		pin = 1 - pin;
 		if (thid >= offset)
-			out[thid] += out[thid - offset];
+			temp[pout*len + thid] += temp[pin*len + thid - offset];
+		else
+		{
+			temp[pout * len + thid] = temp[pin*len + thid];
+		}
 		__syncthreads();
 	}
+	out[thid] = 
 }
 
 int main()
@@ -52,7 +60,10 @@ int main()
 	{
 		out[i] = 0; 
 	}
-	scanNaive(in, out, len);
+	//scanNaive(in, out, len);
+	//printArray(out, len);
+
+	scanSharedMem_singleblock(in, out, len);
 	printArray(out, len);
 	delete[] out;
     return 0;
