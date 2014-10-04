@@ -88,6 +88,26 @@ you are NOT allowed to use shared memory.
   include a table of how the runtimes compare on different lengths of arrays.
 * Plot a graph of the comparison and write a short explanation of the phenomenon you
   see here.
+Array  Length	CPU
+10	0.0007
+100	0.0014
+1000	0.007
+10000	0.07
+100000	0.87
+1000000	9.4
+10000000	95
+100000000	950
+
+Array  Length	GPU
+10	0.38
+100	0.27
+1000	0.73
+10000	0.87
+100000	3.73
+1000000	6.9
+10000000	32
+100000000	238
+CPU has a almost linear runtime increase because it's a completely serial program. GPU program runs slower when array size is low due to low clocking and low single core performance compared to CPU. However when array size races high, the advantage of parallel programming stands out. When the threads are fully occupied, the GPU program starts to have a linear increase of runtime.
 
 # PART 3 : OPTIMIZING PREFIX SUM
 In the previous section we did not take into account shared memory.  In the
@@ -120,9 +140,8 @@ array for you.  Finally, write a version using thrust.
 * Compare your version of stream compact to your version using thrust.  How do
   they compare?  How might you optimize yours more, or how might thrust's stream
   compact be optimized.
- 
-
-CPU has a almost linear runtime increase because it's a completely serial program. GPU program runs slower when array size is low due to low clocking and low single core performance compared to CPU. However when array size races high, the advantage of parallel programming stands out. When the threads are fully occupied, the GPU program starts to have a linear increase of runtime.
+ My version of scattering is faster compared to the one using thrust. But my scan is slower than the one in the thrust.
+Because thrust uses host memory which resulted in a lot more memory copy between the device and the host. To optimize the thrust code, device memory should be used instead of host memory.
 
 # EXTRA CREDIT (+10)
 For extra credit, please optimize your prefix sum for work parallelism and to
