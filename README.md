@@ -106,6 +106,9 @@ to arbitrary length arrays, this includes arrays that will not fit on one block.
 * Compare this version to the parallel prefix sum using global memory.
 * Plot a graph of the comparison and write a short explanation of the phenomenon
   you see here.
+ 
+If the array size is low, global memory is faster than shared memory. Maybe it is because the shared memory is copied from the global memory at the beginning and the ending. Bank conflict may also causes the problem.
+
 
 # PART 4 : ADDING SCATTER
 First create a serial version of scatter by expanding the serial version of
@@ -117,6 +120,9 @@ array for you.  Finally, write a version using thrust.
 * Compare your version of stream compact to your version using thrust.  How do
   they compare?  How might you optimize yours more, or how might thrust's stream
   compact be optimized.
+ 
+
+CPU has a almost linear runtime increase because it's a completely serial program. GPU program runs slower when array size is low due to low clocking and low single core performance compared to CPU. However when array size races high, the advantage of parallel programming stands out. When the threads are fully occupied, the GPU program starts to have a linear increase of runtime.
 
 # EXTRA CREDIT (+10)
 For extra credit, please optimize your prefix sum for work parallelism and to
