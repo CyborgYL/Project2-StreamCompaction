@@ -1,10 +1,10 @@
-﻿Build started 9/30/2014 4:31:08 PM.
+﻿Build started 10/4/2014 5:17:53 AM.
      1>Project "H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Proj2_Win\Proj2_Win.vcxproj" on node 2 (Build target(s)).
      1>AddCudaCompileDeps:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\include" /I. /FIcuda_runtime.h /c "H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Proj2_Win\kernel.cu" 
        CudaBuild:
          Compiling CUDA source file kernel.cu...
-         cmd.exe /C "C:\Users\Yehua\AppData\Local\Temp\tmpdf838537275244379fa2a4a6d0834bbf.cmd"
+         cmd.exe /C "C:\Users\Yehua\AppData\Local\Temp\tmpce73148b35cd40ce810de0267b12d355.cmd"
          "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\kernel.cu.obj "H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Proj2_Win\kernel.cu"
          
          H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Proj2_Win>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\kernel.cu.obj "H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Proj2_Win\kernel.cu" 
@@ -21,6 +21,13 @@
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\device_functions.h(783): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\device_functions.h(1659): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\sm_13_double_functions.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(92): warning : variable "gthid" was declared but never referenced
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(247): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(268): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(315): warning : variable "length" was declared but never referenced
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(317): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(374): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(408): warning : variable "cudaStatus" was set but never used
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h(853): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h(1820): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
@@ -68,6 +75,13 @@
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\device_functions.h(783): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\device_functions.h(1659): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\sm_13_double_functions.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(92): warning : variable "gthid" was declared but never referenced
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(247): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(268): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(315): warning : variable "length" was declared but never referenced
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(317): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(374): warning : variable "cudaStatus" was set but never used
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(408): warning : variable "cudaStatus" was set but never used
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h(853): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h(1820): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
@@ -78,7 +92,12 @@
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h(6341): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
      1>c:\program files\nvidia gpu computing toolkit\cuda\v6.5\include\math_functions.h(7191): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
          kernel.cu
-     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(13): warning C4018: '<' : signed/unsigned mismatch
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(20): warning C4018: '<' : signed/unsigned mismatch
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(28): warning C4018: '<' : signed/unsigned mismatch
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(287): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(314): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(384): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>H:/Documents/GPU Programming/Project2-StreamCompaction/Proj2_Win/Proj2_Win/kernel.cu(418): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Debug\Proj2_Win.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v6.5\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Debug\Proj2_Win.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Debug\Proj2_Win.lib" /MACHINE:X86 Debug\kernel.cu.obj
          Proj2_Win.vcxproj -> H:\Documents\GPU Programming\Project2-StreamCompaction\Proj2_Win\Debug\Proj2_Win.exe
@@ -94,4 +113,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.98
+Time Elapsed 00:00:05.67
